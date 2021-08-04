@@ -1,7 +1,12 @@
 from flask import url_for, escape
 from flask import Flask, render_template
 
-app = Flask(__name__, template_folder='/home/shiyi/cra/backend/watchlist/watchlist-venv/templates')
+app = Flask(
+    __name__,
+    template_folder='/home/shiyi/cra/backend/watchlist/watchlist-venv/templates',
+    static_folder='/home/shiyi/cra/backend/watchlist/watchlist-venv/static',
+    # static_url_path='',
+)
 
 name = 'Shiyi'
 movies = [
@@ -16,6 +21,7 @@ movies = [
     {'title': 'WALL-E', 'year': '2008'},
     {'title': 'The Pork of Music', 'year': '2012'},
 ]
+
 
 # @app.route('/')
 # def hello():
